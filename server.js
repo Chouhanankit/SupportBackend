@@ -12,14 +12,21 @@ connectDB()
 const PORT = process.env.PORT || 4000;
 
 // Configure CORS
+// const corsOptions = {
+//     origin: 'https://support-frontend-theta.vercel.app', // The origin you want to allow
+//     methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
+//     allowedHeaders: 'Content-Type, Authorization', // Allowed headers
+//     credentials: true, // Enable credentials if needed
+// };
+
 const corsOptions = {
-    origin: 'https://support-frontend-theta.vercel.app', // The origin you want to allow
-    methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
-    allowedHeaders: 'Content-Type, Authorization', // Allowed headers
-    credentials: true, // Enable credentials if needed
+    origin: 'https://support-frontend-theta.vercel.app',
+    optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
+
+
 
 
 // Body Parse
